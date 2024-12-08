@@ -49,7 +49,6 @@ nav a.active {
   border-radius: 15px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   width: 300px;
-  height: auto;
   margin: 20px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -63,11 +62,6 @@ nav a.active {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  transition: opacity 0.3s ease;
-}
-
-.recipe-card:hover img {
-  opacity: 0.8;
 }
 
 .recipe-card-content {
@@ -78,7 +72,7 @@ nav a.active {
 .recipe-card-content h3 {
   font-size: 1.5rem;
   color: #333;
-  padding: 20px;
+  padding: 10px;
 }
 
 .recipe-card-content p {
@@ -89,7 +83,7 @@ nav a.active {
 .recipe-card-content a {
   font-size: 1.1rem;
   padding: 10px 20px;
-  background-color:red;
+  background-color: red;
   color: white;
   text-transform: uppercase;
   border-radius: 25px;
@@ -98,8 +92,9 @@ nav a.active {
 
 .recipe-card-content a:hover {
   background-color: #45a049;
-
 }
+
+/* Recipe Detail Styles */
 .recipe-detail-container {
   max-width: 1200px;
   margin: 40px auto;
@@ -138,7 +133,7 @@ nav a.active {
   color: #333;
 }
 
-
+/* Button Styles */
 button, .btn {
   background: linear-gradient(135deg, #fda085, #f6d365);
   border: none;
@@ -151,14 +146,72 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-  transform: scale;
-}
-.home-page{
-  margin-top: 100px;
-  margin-left: 600px;
-}
-.home-page h1{
-  margin-left: 65px;
-  color:red;
+  transform: scale(1.1);
 }
 
+.home-page {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.home-page h1 {
+  color: red;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout for Recipe Cards */
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  .recipe-card {
+    width: 90%;
+  }
+
+  .recipe-detail-container {
+    padding: 20px;
+  }
+
+  button, .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .recipe-detail-container h2 {
+    font-size: 2rem;
+  }
+
+  .recipe-card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .recipe-card-content p {
+    font-size: 0.9rem;
+  }
+
+  button, .btn {
+    font-size: 0.9rem;
+  }
+}
